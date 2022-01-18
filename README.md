@@ -1,4 +1,4 @@
-# Rockbuster-SQL-Queries
+# Rockbuster-SQL-Project
 PostgreSQL Queries written to answer Rockbuster's business related questions.
 
 
