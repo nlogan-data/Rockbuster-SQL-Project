@@ -1,0 +1,24 @@
+--Top Ten Cities within Top Ten Countries, each by Customer Count
+
+--Common Table expression for Top Ten Countries by Customer Count
+WITH top_10_country(country_id, country, number_of_customers)
+AS
+(SELECT D.country_id, D.country, count(A.customer_id) AS number_of_customers
+ FROM customer A
+ INNER JOIN address B ON A.address_id = B.address_id
+ INNER JOIN city C ON B.city_id = C.city_id
+ INNER JOIN country D ON C.country_id = D.country_id
+ GROUP BY D.country_id, D.country
+ ORDER BY number_of_customers DESC
+ LIMIT 10)
+ 
+--Top Ten Cities by Customer Count within top_10_country
+SELECT C.city_id, C.city, D.country, count(A.customer_id) AS number_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+RIGHT JOIN top_10_country E ON D.country_id = E.country_id
+GROUP BY C.city_id, C.city, D.country
+ORDER BY number_of_customers DESC
+LIMIT 10
