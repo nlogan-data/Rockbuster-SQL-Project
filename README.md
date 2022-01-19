@@ -1,20 +1,19 @@
-# Rockbuster-SQL-Project
+# Rockbuster Data Analysis Case Study
 The following project is an assignment from CareerFoundry's Data Analytics course. I completed the project independently; however, in this case study I refer to an analyst team and speak in first-person plural.
 
-## Rockbuster Data Analysis Case Study
 ![Rockbuster logo](https://user-images.githubusercontent.com/97688439/150031170-8fd08a7e-f6d5-45fd-ba67-5db869777c47.png)
 
-### Overview and Purpose
+## Overview and Purpose
 Rockbuster, a movie rental company, is interested in launching an online video rental service. They've asked our team to conduct ad-hoc analysis to answer business-related questions.
 
-### Context
+## Context
 Rockbuster's dataset was ready for a relational database management system. They needed someone's SQL skills to answer their questions.
 
 See the data dictionary [here](/Files-for-Relative-Links/DataDictionary.pdf).
 
 Download a .tar of Rockbuster's database [here](/Files-for-Relative-Links/Rockbuster.tar).
 
-### Objective
+## Objective
 Rockbuster wanted to know:
 
 •	Top countries by customer count
@@ -31,7 +30,7 @@ We then did further analysis, discovering:
 
 •	By country, there is a strong correlation between number of customers and total amount paid
 
-### Tools and Skills
+## Tools and Skills
 ![PostgreSQL logo](https://user-images.githubusercontent.com/97688439/150032176-416f9a81-94ed-4a66-b391-99a468d9945d.png)
 
 **PostgreSQL:** SQL SELECT Querying
@@ -59,7 +58,7 @@ We then did further analysis, discovering:
 
 •	Storyboard for presentation
 
-### Project Steps
+## Project Steps
 First, we uploaded the dataset to PostgreSQL and generated an entity relationship diagram (ERD), which is shown below. We chose PostgreSQL because the nature of Rockbuster's questions lent themselves to SQL querying: The questions dealt with subsets of the data, and SQL makes it easy to pull specific portions from datasets. The ERD is necessary for the analysis because it shows how the data tables are connected to one another. We needed an understanding of those relationships to combine the tables while querying the data. There were no difficulties with this stage of the project, as the data was ready to be uploaded into a relational database management system, and PostgreSQL has a built-in ERD generator.
 
 ![Entity Relationship Diagram](/Files-for-Relative-Links/RockbusterERD.png)
@@ -98,7 +97,7 @@ There were no setbacks during the storyboard process, as the visualizations were
 
 View our full storyboard [here](https://public.tableau.com/app/profile/nick.logan5306/viz/RockbusterDataAnalysis_16364277659820/Story1)
 
-### Conclusion
+## Conclusion
 I switch to first-person singular in this section, as it contains reflection. I also reacknowledge that this was an educational project.
 
 I was able to answer all the questions Rockbuster asked. The most surprising finding was how many cities had just one customer. If this were not an educational project, I would have reached out to someone before delivering this product, getting to the bottom of the one-customer-only situation. I did speak with my mentor about this, mentioning that it may have been a measure to reduce the total amount of data in the dataset. He confirmed this suspicion.
