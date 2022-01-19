@@ -1,0 +1,37 @@
+--Common Table Expression for Top Ten Countries by Customer Count
+WITH top_10_country(country_id, country, number_of_customers)
+AS
+(SELECT D.country_id, D.country, count(A.customer_id) AS number_of_customers
+ FROM customer A
+ INNER JOIN address B ON A.address_id = B.address_id
+ INNER JOIN city C ON B.city_id = C.city_id
+ INNER JOIN country D ON C.country_id = D.country_id
+ GROUP BY D.country_id, D.country
+ ORDER BY number_of_customers DESC
+ LIMIT 10)
+
+--Common Table Expression for Top Ten Cities by customer count within top_10_country
+, top_10_city(city_id, city, country, number_of_customers)
+AS
+(SELECT C.city_id, C.city, D.country, count(A.customer_id) AS number_of_customers
+ FROM customer A
+ INNER JOIN address B ON A.address_id = B.address_id
+ INNER JOIN city C ON B.city_id = C.city_id
+ INNER JOIN country D ON C.country_id = D.country_id
+ RIGHT JOIN top_10_country E ON D.country_id = E.country_id
+ GROUP BY C.city_id, C.city, D.country
+ ORDER BY number_of_customers DESC
+ LIMIT 10)
+
+--Top 5 Customers by Total Amount Paid in top_10_city within top_10_country
+SELECT A.customer_id, A.last_name, A.first_name, D.country, C.city, SUM(F.amount) AS total_amount_paid
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+INNER JOIN rental E ON A.customer_id = E.customer_id
+INNER JOIN payment F ON E.rental_id = F.rental_id
+INNER JOIN top_10_city H ON C.city_id = H.city_id
+GROUP BY A.customer_id, A.last_name, A.first_name, C.city, D.country
+ORDER BY SUM(F.amount) DESC
+LIMIT 5
