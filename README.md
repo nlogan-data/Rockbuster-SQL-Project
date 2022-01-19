@@ -50,6 +50,7 @@ We then did further analysis, discovering:
 ![Tableau logo](https://user-images.githubusercontent.com/97688439/150032188-cac6c36a-b2f7-459e-9f85-ee757be5788b.png)
 
 **Tableau:** Visualization of Results
+
 •	Point Map
 
 •	Scatterplot
