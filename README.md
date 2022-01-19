@@ -10,7 +10,7 @@ Rockbuster, a movie rental company, is interested in launching an online video r
 ### Context
 Rockbuster's dataset was ready for a relational database management system. They needed someone's SQL skills to answer their questions.
 
-See the data dictionary [here](/Files-for-Relative-Links/DataDictionary.pdf.md).
+See the data dictionary [here](/Files-for-Relative-Links/DataDictionary.pdf).
 
 Download a .tar of Rockbuster's database [here](Rockbuster.tar.md).
 
