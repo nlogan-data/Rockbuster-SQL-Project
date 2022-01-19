@@ -12,7 +12,7 @@ Rockbuster's dataset was ready for a relational database management system. They
 
 See the data dictionary [here](/Files-for-Relative-Links/DataDictionary.pdf).
 
-Download a .tar of Rockbuster's database [here](Rockbuster.tar.md).
+Download a .tar of Rockbuster's database [here](/Files-for-Relative-Links/Rockbuster.tar).
 
 ### Objective
 Rockbuster wanted to know:
@@ -59,7 +59,7 @@ We then did further analysis, discovering:
 ### Project Steps
 First, we uploaded the dataset to PostgreSQL and generated an entity relationship diagram (ERD), which is shown below. We chose PostgreSQL because the nature of Rockbuster's questions lent themselves to SQL querying: The questions dealt with subsets of the data, and SQL makes it easy to pull specific portions from datasets. The ERD is necessary for the analysis because it shows how the data tables are connected to one another. We needed an understanding of those relationships to combine the tables while querying the data. There were no difficulties with this stage of the project, as the data was ready to be uploaded into a relational database management system, and PostgreSQL has a built-in ERD generator.
 
-![Entity Relationship Diagram](Rockbuster_ERD.png.md)
+![Entity Relationship Diagram](/Files-for-Relative-Links/RockbusterERD.png)
 
 Next, we queried the data to answer business questions. This was the most involved step of the project, requiring SQL expertise. Our goal was to come up with result tables that could be exported for visualization. 
 
@@ -67,12 +67,12 @@ The select queries required aggregate functions, multiple joins as well as group
 
 A challenge we faced is that more than nine cities—in the top ten countries by customer count—were tied for second in terms of customer count, and Rockbuster wanted the top ten. Moreover, they were tied at a value of one, so any active city was truly in second place. SQL generated ten results, seemingly arbitrarily. In fact, cities 2-9 changed when using a subquery instead of common table expression. To navigate the multiple-second-place-cities dilemma, we included a histogram of customer counts in our final analysis after displaying on a point map the top 10 that SQL generated.
 
-![SQL Query and Result](Sample Postegres Query.png.md)
+![SQL Query and Result](/Files-for-Relative-Links/SamplePostegresQuery.png)
 
 In hindsight, it would have been better to include all the active cities in the table for our point map. This would have drawn more attention to the many-way tie. Additionally (breaking the fourth wall in this sentence), had this been a true analysis, we would have contacted the data engineer or client to see if the data they sent us was incomplete/corrupted.
 After each successful query, we exported the resulting data to .csv, which is easily read by Tableau.
 
-See all of the SQL queries and results [here](SQL Queries and Results.xls.md). To see the queries individually, see the SQL query folder [here](SQL-Queries.md).
+See all of the SQL queries and results [here](/Files-for-Relative-Links/SQLQueriesandResults.xls). To see the queries individually, see the SQL query folder [here](/SQL-Queries).
 
 In Tableau, made a story board to present our findings to Rockbuster. We started with an executive summary, then answer the questions the company posed, and finally display some of our own analysis. We chose this order to first set the stage and share key results, then show what Rockbuster requested, and finally elucidate with more visualizations.
 We created point maps to visualize the information Rockbuster requested:
@@ -87,7 +87,7 @@ We created point maps to visualize the information Rockbuster requested:
 
 We chose to use point maps for easy geospatial trend spotting. We used size and color to denote the magnitude of the values.
 
-![Point Map of Top 10 Countries by Customer Count](Sample Point Map.png.md)
+![Point Map of Top 10 Countries by Customer Count](/Files-for-Relative-Links/SamplePointMap.png)
 
 Our additions to the analysis were a scatterplot, which showed the correlation between a country's customer count and revenue, and a histogram of the customer count by city. A correlation between customers and revenue is often assumed, but we were able to confirm that assumption with the scatterplot; its trendline had a correlation coefficient very close to 1—a near-perfect correlation. The histogram illustrated the lack of customer depth in active cities, as almost every city had just one customer.
 
