@@ -1,0 +1,26 @@
+--Customer Count Histogram Table
+SELECT COUNT(active_1.city_id) AS one_customer, COUNT(active_2.city_id) AS two_customers, COUNT(active_plus.city_id) AS three_or_more_customers
+FROM
+--Subquery: Cities with 1 customer
+(SELECT C.city_id
+ FROM customer A
+ INNER JOIN address B ON A.address_id = B.address_id
+ INNER JOIN city C ON B.city_id = C.city_id
+ GROUP BY C.city_id
+ HAVING COUNT(A.customer_id) = 1) AS active_1
+FULL JOIN
+--Subquery: Cities with 2 customers
+(SELECT C.city_id
+ FROM customer A
+ INNER JOIN address B ON A.address_id = B.address_id
+ INNER JOIN city C ON B.city_id = C.city_id
+ GROUP BY C.city_id
+ HAVING COUNT(A.customer_id) = 2) AS active_2 ON active_1.city_id = active_2.city_id
+FULL JOIN
+--Subquery: Cities with 3 or more customers
+(SELECT C.city_id
+ FROM customer A
+ INNER JOIN address B ON A.address_id = B.address_id
+ INNER JOIN city C ON B.city_id = C.city_id
+ GROUP BY C.city_id
+ HAVING COUNT(A.customer_id) > 2) AS active_plus ON active_2.city_id = active_plus.city_id
