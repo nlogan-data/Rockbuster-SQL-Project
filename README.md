@@ -32,7 +32,7 @@ We then did further analysis, discovering:
 •	By country, there is a strong correlation between number of customers and total amount paid
 
 ### Tools and Skills
-![PostgreSQL logo](https://user-images.githubusercontent.com/97688439/150032176-416f9a81-94ed-4a66-b391-99a468d9945d.png)     ![Tableau logo](https://user-images.githubusercontent.com/97688439/150032188-cac6c36a-b2f7-459e-9f85-ee757be5788b.png)
+![PostgreSQL logo](https://user-images.githubusercontent.com/97688439/150032176-416f9a81-94ed-4a66-b391-99a468d9945d.png)
 
 **PostgreSQL:** SQL SELECT Querying
 
@@ -46,6 +46,8 @@ We then did further analysis, discovering:
 •	Common Table Expressions using WITH
 
 •	Exporting query results to .csv files
+
+![Tableau logo](https://user-images.githubusercontent.com/97688439/150032188-cac6c36a-b2f7-459e-9f85-ee757be5788b.png)
 
 **Tableau:** Visualization of Results
 •	Point Map
