@@ -74,7 +74,7 @@ A challenge we faced is that more than nine cities—in the top ten countries by
 In hindsight, it would have been better to include all the active cities in the table for our point map. This would have drawn more attention to the many-way tie. Additionally (breaking the fourth wall in this sentence), had this been a true analysis, we would have contacted the data engineer or client to see if the data they sent us was incomplete/corrupted.
 After each successful query, we exported the resulting data to .csv, which is easily read by Tableau.
 
-See all of the SQL queries and results [here](/Files-for-Relative-Links/SQLQueriesandResults.xls). To see the queries individually, see the SQL query folder [here](/SQL-Queries).
+Download an Excel file showing all of the SQL queries and results [here](/Files-for-Relative-Links/SQLQueriesandResults.xls). To see the queries individually, see the SQL query folder [here](https://github.com/nlogan-data/Rockbuster-SQL-Project/tree/main/SQL-Queries).
 
 In Tableau, made a story board to present our findings to Rockbuster. We started with an executive summary, then answer the questions the company posed, and finally display some of our own analysis. We chose this order to first set the stage and share key results, then show what Rockbuster requested, and finally elucidate with more visualizations.
 We created point maps to visualize the information Rockbuster requested:
