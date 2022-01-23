@@ -1,3 +1,5 @@
+# [Projects](https://nlogandata.wordpress.com/projects/)
+
 # Rockbuster Data Analysis Case Study
 The following project is an assignment from CareerFoundry's Data Analytics course. I completed the project independently; however, in this case study I refer to an analyst team and speak in first-person plural. See the full GitHub repository [here](https://github.com/nlogan-data/Rockbuster-SQL-Project).
 
