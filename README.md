@@ -102,6 +102,6 @@ View our full storyboard [here](https://public.tableau.com/app/profile/nick.loga
 ## Conclusion
 I switch to first-person singular in this section, as it contains reflection. I also reacknowledge that this was an educational project.
 
-I was able to answer all the questions Rockbuster asked. The most surprising finding was how many cities had just one customer. If this were not an educational project, I would have reached out to someone before delivering this product, getting to the bottom of the one-customer-only situation. I did speak with my mentor about this, mentioning that it may have been a measure to reduce the total amount of data in the dataset. He confirmed this suspicion.
+I was able to answer all the questions Rockbuster asked. The most surprising finding was how many cities had just one customer. If this were not an educational project, I would have reached out to a higher-up or the client before delivering the final product--to find out whether the lack of customers per city is an error. I did speak with my course mentor about this, mentioning that it may have been a measure to reduce the total amount of data in the dataset. He confirmed this suspicion.
 
-If I were to change anything, I would have included all the active cities in my point map of the top cities by customer count within the top ten countries—as mentioned in the previous section.
+If I were to change anything, I would have included all the active cities in my point map of the top cities by customer count within the top ten countries, as I mentioned in the previous section.
